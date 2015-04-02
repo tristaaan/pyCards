@@ -2,7 +2,7 @@
 '''
 Deck of arbitrary cards
 '''
-from numpy import random
+from random import random
 
 #Hoyle cards
 class card(object):   
@@ -39,7 +39,7 @@ class deck(card):
 		temp = [0]*self.size
 		while 0 in temp:
 			for x in self.cards:
-				spot = int(random.rand()*self.size)
+				spot = int(random()*self.size)
 				if temp[spot] is 0 and x not in temp:
 					temp[spot] = x
 					(self.cards).remove(x)

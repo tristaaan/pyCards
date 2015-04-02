@@ -1,26 +1,26 @@
 from cards import *
 
 suites = ["hearts", "spades", "diamonds", "clubs"]
-set = deck([])
+deck = deck([])
 
-for y in suites:
+for suite in suites:
 	a = []
-	for x in range(2,15):
-		if x is 11:
-			x = "jack"
-		if x is 12:
-			x = "queen"
-		if x is 13:
-			x = "king"
-		if x is 14:
-			x = "ace"
-		a.append(card(x,y))
-	set + a
+	for name in range(2,15):
+		if name == 11:
+			name = "jack"
+		if name == 12:
+			name = "queen"
+		if name == 13:
+			name = "king"
+		if name == 14:
+			name = "ace"
+		a.append(card(name,suite))
+	deck + a
 	
-set.shuffle()
+deck.shuffle()
 
-for x in set.cards:
-	print x
+for card in deck.cards:
+	print card
 	
 '''
 from cards import *
